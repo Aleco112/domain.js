@@ -19,12 +19,10 @@ function fromEuroToDollar(euro){
 function fromDollarToYen(dollars){
     return (dollars / oneEuroIs.USD)*oneEuroIs.JPY
 }
-function formYenToPound(yen){
-    return
+function formYenToPound(yen){ 
+    return (yen / oneEuroIs['JPY']) *oneEuroIs['GBP']
 
 }
 // export the function to be used on other files 
 // (similar to the keyword `export` when using webpack)
-module.exports = { sum : sum,
-                fromEuroToDollar:fromEuroToDollar,
-            fromDollarToYen:fromDollarToYen};
+ module.exports = { sum, fromEuroToDollar,fromDollarToYen,formYenToPound}
